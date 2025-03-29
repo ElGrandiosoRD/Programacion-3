@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #F5F5F5;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: black;
+    padding: 0;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+
+}
+
+.top-bar {
+    background-color: black;
+    color: white;
+    padding: 3px 0;
+}
+
+.top-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-left, .top-bar-right {
+    display: flex;
+    align-items: center;
+}
+
+.top-bar span, .top-bar a {
+    margin: 0 7px;
+    color: white;
+    font-size: 11px;
+}
+
+.currency-dropdown {
+    position: relative;
+    margin-right: 10px;
+}
+
+#currencySelector {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar ul li a {
+    font-size: 16px;
+    padding: 7px 11px;
+    color: white;
+    display: block;
+    position: relative;
+}
+
+.navbar ul li a:hover {
+    font-size: 18px;
+    color: #ffaa0c;
+}
+.menu a:hover::after {
+    content: ""; 
+    position: absolute; /* Posiciona la linea */
+    left: 0;
+    bottom: 0; /* Coloca la linea en la parte inferior */
+    width: 100%; /* Ancho de la lineeea */
+    height: 2px; /* Grosor de la linea */
+    background-color: #d98d12; /* Color de la linea */
+  }
+
+.compare {
+    display: flex;
+    align-items: center;
+}
+
+.submenu {
+    position: relative;
+    position: relative;
+
+}
+
+.submenu #carrito {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    background-color: #4E485076;
+    padding: 20px;
+    min-width: 400px;
+    backdrop-filter: blur(10px);
+}
+
+.submenu:hover #carrito {
+    display: block;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    color: #FFFFFF;
+}
+
+.borrar {
+    background-color: #111111;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+
+
+
+#menu-toggle {
+    display: none; /* Ocultar el checkbox  */
+}
+
+.menu-icono {
+    display: none; /* Ocultar el icono del menu*/
+}
+.menu img {
+       width: 11%;
+       margin: 3px 40px;
+}
+
+.menu {
+    display: flex;
+    padding: 0;
+}
+
+.search-bar {
+    width: 40%;
+    display: block;
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: flex;
+    justify-content: left;
+    box-shadow: 0 4px 6px rgba(158, 130, 130, 0.1);
+}
+
+.search-bar input, .search-bar select, .search-bar button {
+    padding: 7px;
+    background-color: #212121;
+    color: #f0f0f0;
+    width: 60%;
+    border: none;
+    font-size: 13px;
+    height: 31px;
+}
+
+.search-bar select {
+    background-image: none;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="3" height="6"><path d="M0 0l5 6 5-6z" fill="%23333"/></svg>');
+}
+
+.search-bar select {
+    font-size: 11px;
+}
+
+.search-bar button {
+    background-color: #212121;
+    width: 15%;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+
+/*Queries*/
+@media (max-width: 768px) {
+    .menu-icono {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: black;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    #menu-toggle:checked + .navbar {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .search-bar-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .search-bar input, .search-bar select, .search-bar button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .blue-block-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .blue-block-container span {
+        margin-bottom: 10px;
+    }
+}
+
+
